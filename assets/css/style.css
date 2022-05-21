@@ -3,3 +3,19 @@ header {
     justify-content: space-between;
     background-color: aquamarine;
 }
+
+header * {
+    margin: .4rem;
+    font-size: 1.2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.3rem;
+    margin: 1.5rem;
+}
