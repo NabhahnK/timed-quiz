@@ -73,21 +73,6 @@ function checkAnswer(event) {
     }
 }
 
-function highscoreTable() {
-    if (localStorage != null) {
-        for (var i; i < localStorage.length; i++) {
-            var key = localStorage.key(i);
-            var value = localStorage[key];
-            var newRow = document.createElement("tr");
-            var valuesForRow = createElement("td");
-            valuesForRow.innerText = key;
-            newRow.appendChild(valuesForRow);
-            valuesForRow.innerText = value;
-            newRow.appendChild(valuesForRow);
-        }
-    }
-}
-
 start.addEventListener("click", function () {
     startQuiz();
     timer = setInterval(function () {
@@ -114,4 +99,3 @@ form.addEventListener("click", function () {
     var name = document.getElementById("initials").value;
     localStorage.setItem(name, score);
 });
-highscoreTable();
