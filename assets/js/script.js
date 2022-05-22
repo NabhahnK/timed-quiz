@@ -8,7 +8,12 @@ var question = [
 
 function startQuiz() {
     document.getElementById("start").style.display = "none";
-    document.getElementById("one").style.display = "block"
+    document.getElementById("one").style.display = "block";
+}
+
+function nextQuestion(x, y) {
+    document.getElementById(x).style.display = "none";
+    document.getElementById(y).style.display = "block";
 }
 
 start.addEventListener("click", function() {
