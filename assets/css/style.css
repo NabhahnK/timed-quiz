@@ -15,6 +15,14 @@ main {
     text-align: center;
 }
 
+main p {
+    border-top: solid black 1px;
+}
+
+li {
+    margin: .3rem;
+}
+
 h1 {
     font-size: 2.3rem;
     margin: 1.5rem;
