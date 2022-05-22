@@ -5,8 +5,11 @@ var mainEl = document.getElementById("main");
 var time = 74;
 var score = 0;
 var question = [
-    "What is your name?",
-    "Is your name Bob?"
+    "Does a var create a variable",
+    "What is one way of making a loop?",
+    "Can you make a button with out JS?",
+    "Is jQuary needed to make websites?",
+    "Can you do without BootStrap?"
 ]
 
 function startQuiz() {
@@ -98,4 +101,5 @@ mainEl.addEventListener("click", checkAnswer);
 form.addEventListener("click", function () {
     var name = document.getElementById("initials").value;
     localStorage.setItem(name, score);
+    location.href='./high-score.html';
 });
