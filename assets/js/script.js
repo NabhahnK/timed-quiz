@@ -42,6 +42,8 @@ function checkCurrentList() {
         changeH1(4);
     } else {
         nextQuestion("five", "inputName");
+        document.getElementById("indecator").textContent = "Input your initials.";
+        document.getElementById("indecator").style.borderTop = "none"
     }
 }
 
@@ -51,10 +53,10 @@ function checkAnswer(event) {
 
     if (state != null) {
         if (state === "correct") {
-            console.log("right");
+            document.getElementById("indecator").textContent = state;
             checkCurrentList();
         } else {
-            console.log("Else");
+            document.getElementById("indecator").textContent = state;
         }
     }
 

@@ -27,6 +27,7 @@ main button {
 
 main p {
     border-top: solid black 1px;
+    margin: .3rem;
 }
 
 ul {
@@ -40,4 +41,8 @@ li {
 h1 {
     font-size: 2.3rem;
     margin: 1.5rem;
+}
+
+#inputName {
+    display: none;
 }
