@@ -54,9 +54,12 @@ function checkAnswer(event) {
     if (state != null) {
         if (state === "correct") {
             document.getElementById("indecator").textContent = state;
+            score += 1;
             checkCurrentList();
         } else {
             document.getElementById("indecator").textContent = state;
+            score -= 5;
+            checkCurrentList();
         }
     }
 
