@@ -10,6 +10,7 @@ var question = [
 function startQuiz() {
     document.getElementById("start").style.display = "none";
     document.getElementById("one").style.display = "block";
+    changeH1(0);
 }
 
 function nextQuestion(x, y) {
@@ -18,7 +19,7 @@ function nextQuestion(x, y) {
 }
 
 function changeH1(x) {
-    document.getElementById("quiz")
+    document.getElementById("quiz").textContent = question[x];
 }
 
 function checkCurrentList() {
@@ -26,16 +27,19 @@ function checkCurrentList() {
     var listTwo = document.getElementById("two");
     var listThree = document.getElementById("three");
     var listFour = document.getElementById("four");
-    var listFive = document.getElementById("five");
 
     if (listOne.style.display === "block") {
         nextQuestion("one", "two");
+        changeH1(1);
     } else if (listTwo.style.display === "block") {
         nextQuestion("two", "three");
+        changeH1(2);
     } else if (listThree.style.display === "block") {
         nextQuestion("three", "four")
+        changeH1(3);
     } else if (listFour.style.display === "block") {
         nextQuestion("four", "five");
+        changeH1(4);
     } else {
         nextQuestion("five", "inputName");
     }
