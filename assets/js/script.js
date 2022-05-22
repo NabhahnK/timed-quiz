@@ -17,6 +17,30 @@ function nextQuestion(x, y) {
     document.getElementById(y).style.display = "block";
 }
 
+function changeH1(x) {
+    document.getElementById("quiz")
+}
+
+function checkCurrentList() {
+    var listOne = document.getElementById("one");
+    var listTwo = document.getElementById("two");
+    var listThree = document.getElementById("three");
+    var listFour = document.getElementById("four");
+    var listFive = document.getElementById("five");
+
+    if (listOne.style.display === "block") {
+        nextQuestion("one", "two");
+    } else if (listTwo.style.display === "block") {
+        nextQuestion("two", "three");
+    } else if (listThree.style.display === "block") {
+        nextQuestion("three", "four")
+    } else if (listFour.style.display === "block") {
+        nextQuestion("four", "five");
+    } else {
+        nextQuestion("five", "inputName");
+    }
+}
+
 function checkAnswer(event) {
     var target = event.target;
     var state = target.getAttribute("data-state");
@@ -24,6 +48,7 @@ function checkAnswer(event) {
     if (state != null) {
         if (state === "correct") {
             console.log("right");
+            checkCurrentList();
         } else {
             console.log("Else");
         }
