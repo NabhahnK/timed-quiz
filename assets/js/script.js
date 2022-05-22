@@ -8,6 +8,7 @@ var question = [
 
 function startQuiz() {
     document.getElementById("start").style.display = "none";
+    document.getElementById("one").style.display = "block"
 }
 
 start.addEventListener("click", function() {
