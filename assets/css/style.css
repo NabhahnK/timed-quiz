@@ -46,3 +46,24 @@ h1 {
 #inputName {
     display: none;
 }
+
+#highscoremain {
+    display: flex;
+    align-items: center;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+  }
+  
+  td, th {
+    border: 1px solid aquamarine;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: aquamarine;
+  }
