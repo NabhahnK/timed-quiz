@@ -20,6 +20,11 @@ main {
     text-align: center;
 }
 
+main button {
+    align-self: center;
+    margin-bottom: .3rem;
+}
+
 main p {
     border-top: solid black 1px;
 }
