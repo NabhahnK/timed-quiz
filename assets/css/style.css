@@ -9,6 +9,11 @@ header * {
     font-size: 1.2rem;
 }
 
+button {
+    min-width: 50px;
+    max-width: 100px;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -17,6 +22,10 @@ main {
 
 main p {
     border-top: solid black 1px;
+}
+
+ul {
+    display: none;
 }
 
 li {
