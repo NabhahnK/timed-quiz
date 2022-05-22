@@ -1,4 +1,5 @@
 var timer;
+var form = document.getElementById("submit");
 var start = document.getElementById("start");
 var mainEl = document.getElementById("main");
 var time = 74;
@@ -83,7 +84,6 @@ start.addEventListener("click", function () {
             for (var i = 0; i < ulEls.length; i++) {
                 ulEls[i].style.display = "none";
             }
-            localStorage.setItem(name, score);
             nextQuestion("five", "inputName");
             document.getElementById("indecator").textContent = "Input your initials.";
             document.getElementById("indecator").style.borderTop = "none"
@@ -93,4 +93,9 @@ start.addEventListener("click", function () {
     }, 1000);
 });
 
+
 mainEl.addEventListener("click", checkAnswer);
+form.addEventListener("click", function () {
+    var name = document.getElementById("initials").value;
+    localStorage.setItem(name, score);
+});
