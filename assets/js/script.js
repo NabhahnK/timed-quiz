@@ -1,6 +1,7 @@
+var timer;
 var start = document.getElementById("start");
 var mainEl = document.getElementById("main");
-var time = 75;
+var time = 74;
 var score = 0;
 var question = [
     "What is your name?",
@@ -44,6 +45,9 @@ function checkCurrentList() {
         nextQuestion("five", "inputName");
         document.getElementById("indecator").textContent = "Input your initials.";
         document.getElementById("indecator").style.borderTop = "none"
+        document.getElementById("quiz").textContent = "";
+        clearInterval(timer);
+
     }
 }
 
@@ -70,12 +74,20 @@ function checkAnswer(event) {
 
 start.addEventListener("click", function () {
     startQuiz();
-    var timer = setInterval(function () {
+    timer = setInterval(function () {
         if (time >= 0) {
             document.getElementById("timer").innerHTML = time;
             time--;
         } else {
+            var ulEls = document.querySelectorAll("ul");
+            for (var i = 0; i < ulEls.length; i++) {
+                ulEls[i].style.display = "none";
+            }
             localStorage.setItem(name, score);
+            nextQuestion("five", "inputName");
+            document.getElementById("indecator").textContent = "Input your initials.";
+            document.getElementById("indecator").style.borderTop = "none"
+            document.getElementById("quiz").textContent = "";
             clearInterval(timer);
         }
     }, 1000);
