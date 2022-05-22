@@ -6,8 +6,12 @@ var question = [
     "Is your name Bob?"
 ]
 
+function startQuiz() {
+    document.getElementById("start").style.display = "none";
+}
+
 start.addEventListener("click", function() {
-    console.log("test");
+    startQuiz();
     var timer = setInterval(function () {
         if (time >= 0) {
             document.getElementById("timer").innerHTML = time;
