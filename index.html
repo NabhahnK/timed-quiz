@@ -14,18 +14,18 @@
         <p>Time: <span id="timer">/timer placeholder/</span></p>
     </header>
 
-    <main>
+    <main id="main">
     <h1>Quiz</h1>
     <!-- first of the answer blocks -->
 
-    <button id="start">Start?</button>
+    <button type="button" id="start">Start?</button>
 
     <ul id="one">
         <li>
-            <button type="button">Yes</button>
+            <button type="button" data-state="correct">Yes</button>
         </li>
         <li>
-            <button type="button">No</button>
+            <button type="button" data-state="wrong">No</button>
         </li>
     </ul>
     <ul id="two">

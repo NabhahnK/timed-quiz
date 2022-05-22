@@ -1,4 +1,5 @@
 var start = document.getElementById("start");
+var mainEl = document.getElementById("main");
 var time = 75;
 var score = 0;
 var question = [
@@ -16,7 +17,24 @@ function nextQuestion(x, y) {
     document.getElementById(y).style.display = "block";
 }
 
-start.addEventListener("click", function() {
+function checkAnswer(event) {
+    var target = event.target;
+    var state = target.getAttribute("data-state");
+
+    if (state != null) {
+        if (state === "correct") {
+            console.log("right");
+        } else {
+            console.log("Else");
+        }
+    }
+
+    if (target != "button") {
+        return
+    }
+}
+
+start.addEventListener("click", function () {
     startQuiz();
     var timer = setInterval(function () {
         if (time >= 0) {
@@ -29,3 +47,4 @@ start.addEventListener("click", function() {
     }, 1000);
 });
 
+mainEl.addEventListener("click", checkAnswer);
