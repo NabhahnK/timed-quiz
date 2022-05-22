@@ -1,18 +1,21 @@
 function highscoreTable() {
-    if (localStorage != null) {
-        for (var i; i < localStorage.length; i++) {
-            var table = document.getElementById("highscoreTable");
-            var key = localStorage.key(i);
-            var value = localStorage[key];
-            var newRow = document.createElement("tr");
-            var valuesForRow = createElement("td");
-            valuesForRow.innerText = key;
-            newRow.appendChild(valuesForRow);
-            valuesForRow.innerText = value;
-            newRow.appendChild(valuesForRow);
-            table.appendChild(newRow);
-        }
+    for (var i = 0; i < localStorage.length; i++) {
+        console.log("test3");
+        var table = document.getElementById("highscoreTable");
+        var keys = localStorage.key(i);
+        var values = localStorage[keys];
+        var newRow = document.createElement("tr");
+        var valueOne = document.createElement("td");
+        var valueTwo = document.createElement("td");
+        valueOne.innerHTML = keys;
+        newRow.appendChild(valueOne);
+        valueTwo.innerText = values;
+        newRow.appendChild(valueOne);
+        newRow.appendChild(valueTwo);
+        table.appendChild(newRow);
     }
 }
 
-highscoreTable();
+if (localStorage) {
+    highscoreTable();
+}
